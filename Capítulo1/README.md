@@ -1,4 +1,4 @@
-# Nombre del laboratorio 
+# Carga y transformación de datos en Power Query
 
 ## Objetivo de la práctica:
 Al finalizar la práctica, serás capaz de:
