@@ -33,8 +33,8 @@ Paso 3.	Dentro de la pestaña **"Datos"**, busque el grupo **"Obtener y Transfor
 
 Paso 4.	Haga clic en el botón **"Obtener Datos"**.
 
-Paso 5.	En el menú desplegable, seleccione **“Iniciar el Editor de Power Query”**.
-![img-T1P5](../images/image.png)
+Paso 5.	En el menú desplegable, seleccione **“Iniciar el Editor de Power Query”**:
+![Img](../images/ImgT1P5.png)
 
 Paso 2. <!-- Añadir instrucción -->
 
