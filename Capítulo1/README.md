@@ -26,11 +26,15 @@ Crear un diagrama o imagen que resuma las actividades a realizar, un ejemplo es 
 ### Tarea 1. Obtención de datos de SQL Server
 
 Paso 1.	Inicie la aplicación de Excel en su computadora.
+
 Paso 2.	En la cinta superior de Excel, haga clic en la pestaña **"Datos"** para acceder a las herramientas de gestión de datos.
+
 Paso 3.	Dentro de la pestaña **"Datos"**, busque el grupo **"Obtener y Transformar Datos"**.
+
 Paso 4.	Haga clic en el botón **"Obtener Datos"**.
+
 Paso 5.	En el menú desplegable, seleccione **“Iniciar el Editor de Power Query”**.
-![img-T1P5](../images/imgT1P5.png)
+![img-T1P5](../images/image.png)
 
 Paso 2. <!-- Añadir instrucción -->
 
