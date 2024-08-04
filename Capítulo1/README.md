@@ -29,7 +29,7 @@ Al finalizar la práctica, serás capaz de:
 
 - Paso 5.	En el menú desplegable, seleccione **“Iniciar el Editor de Power Query”**:
 
-    ![img](./images/imgT1P5.png) 
+    ![img](./images/imgT1P4.png) 
 
 - Paso 6. En la nueva ventana del Editor de Power Query, en la pestaña de **“Inicio”** busque el grupo **“Nueva consulta”**.
 
@@ -296,7 +296,8 @@ Esta tarea le permite revisar y generar perfiles de los datos. Esto le ayuda a d
     >• **EnglishCountryRegionName** a **Country-Region** <br>
 
 - Paso 8. En la barra de estado, compruebe que la consulta tiene 6 columnas y 701 filas.
-    ![img](./images/imgT7P8.png)  
+
+    ![img](./images/imgT7P9.png)  
 
 ### Tarea 8. Configurar la consulta de Region
 
@@ -322,7 +323,7 @@ Esta tarea le permite revisar y generar perfiles de los datos. Esto le ayuda a d
 
 - Paso 5. En la barra de estado, compruebe que la consulta tiene 4 columnas y 10 filas.
 
-    ![img](./images/imgT8P5.png)  
+    ![img](./images/imgT8P6.png)  
 
 ### Tarea 9. Configurar la consulta de Sales
 
