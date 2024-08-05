@@ -83,7 +83,8 @@ Al finalizar la práctica, serás capaz de:
 
     ![img](./images/imgT2P3.png)  
 
-- Paso 4. Seleccione de **Salesperson** | **Salesperson** y de **Sales | Sales**, en automatico crea una suma del campo **Sales**
+- Paso 4. Seleccione de **Salesperson** | **Salesperson** y de **Sales | Sales**, en automatico crea una suma del campo **Sales**. <br>
+Puede agregar tambien los campos de **Unit Price** y **Quantity**
 
     ![img](./images/imgT2P4.png)  
 
@@ -94,18 +95,159 @@ Al finalizar la práctica, serás capaz de:
 
     ![img](./images/imgT3P1.png)  
 
-- Paso 2. Desde la vista de diagrama, notará que se creo una nueva tabla llamada **Date** 
+- Paso 2. Desde la vista de diagrama, notará que se creo una nueva tabla llamada **Calendario** 
 
-- Paso 3. Relacione la taba **Date** con el modelo
+- Paso 3. Relacione la taba **Calendario** con el modelo
 
     ![img](./images/imgT3P3.png)  
 
-- Paso 4. Desde la pestaña de **Inicio** Cambien la vista a **Vista de Datos** 
+- Paso 4. Elimine todas las columnas excepto **Date**
 
-- Paso 5. Valide la información que se creo en automatico para la tabla **Date**
+    ![img](./images/imgT3P4.png)  
 
-- Paso 6. En la esquina inferior izquierda, en la barra de estado, observe las estadísticas de la tabla, que confirman que se han generado 1826 filas de datos, lo que representa datos de cinco años completos.
+- Paso 5. Desde la pestaña de **Inicio** Cambien la vista a **Vista de Datos** 
+
+- Paso 6. Valide la información que se creo en automatico para la tabla **Calendario**
+
+- Paso 7. En la esquina inferior izquierda, en la barra de estado, observe las estadísticas de la tabla, que confirman que se han generado 1826 filas de datos, lo que representa datos de cinco años completos.
+
+### Tarea 4. Creación de columnas calculadas
+
+En esta tarea, agregará más columnas para habilitar el filtrado y la agrupación por diferentes períodos de tiempo.
+
+- Paso 1. En la ventana de **Power Pivot**, en la sección **Ver**, seleccione **Vista de datos**.
+
+    ![img](./images/imgT4P1.png)  
+
+- Paso 2. En la parte inferior, seleccione la tabla **Calendario**.
+
+- Paso 3. Agregue una nueva columna **Año** con la siguiente expresion, que concatena un texto:
+
+   > ="FY" & YEAR('Calendario'[Date]) + IF (MONTH(Calendario[Date]) > 6; 1)
+
+    *La fórmula utiliza el valor del año de la fecha, pero agrega uno al valor del año cuando el mes es posterior a junio. Así es como se calculan los años fiscales en este escenario.*
+
+- Paso 4. Renombre la **Columna calculada 1** por **Año**
+
+- Paso 5. Agregue una nueva columna con la siguiente DAX para el **Trimestre**:
+
+    >= 'Calendario'[Año] & " T" & <br>
+        >IF(MONTH(Calendario[Date]) <= 3;3; <br>
+            IF(MONTH(Calendario[Date]) <= 6;4; <br>
+            IF(MONTH(Calendario[Date]) <= 9;1;2
+            )
+        )
+    )
+
+- Paso 6. Renombre la **Columna calculada 1** por **Trimestre**
+
+    ![img](./images/imgT4P5.png)  
+
+- Paso 7. agregue una columna **Mes** con la siguiente DAX:
+
+    > = FORMAT(Calendario[Date] ;"YYYY - MMM")
+
+- Paso 8. Renombre la **Columna calculada 1** por **Mes**
+
+- Paso 9. Para Ordenar de acuerdo a los meses dentro del Año Fiscal, agregue una columna con el numero del mes:
+
+    >= (YEAR(Calendario[Date]) * 100) + MONTH(Calendario[Date])
+
+- Paso 10. Renombre la  **Columna calculada 1** por **Número del mes**
+
+    ![img](./images/imgT4P8.png)  
+
+- Paso 11. Agregue los años y meses en una tabla dinámica y observe que los meses no tienen un orden correcto.
+
+    ![img](./images/imgT4P9.png) 
+
+- Paso 12. Para ordenarlos, utilizaremos la columna que creamos anteriormente con el número del mes. En la ventana de **Power Pivot**, seleccione el encabezado de la columna **Mes** y, en la parte superior, en la pestaña **Inicio**, seleccione **Ordenar Por**.
+
+    ![img](./images/imgT4P10.png) 
+
+- Paso 11. En la nueva ventana, seleccione la columna **Numero de mes** y luego seleccione **Aceptar**
+
+- Paso 12. Reguese a la tabla dinamica y verifique el orden correcto de acuerdo con el año fiscal
+
+    ![img](./images/imgT4P12.png) 
+
+
+### Tarea 5. Crear Jerarquia
+
+- Paso 1. En Power Pivot regrese a la vista de diagrama y seleccione la tabla **Calendario**
+
+- Paso 2. Note que en la parte superiro derecha aparece un icono de jerarquia, seleccione este elemento.
+
+    ![img](./images/imgT5P2.png) 
+
+- Paso 3. Nombre la jerarquia con **Fiscal** y luego dentro de ese elemento arrastre los campos de **Año**, **Trimestre** y **Mes** 
+
+    ![img](./images/imgT5P3.png) 
+
+
+### Tarea 6. Cree medidas sencillas
+
+- Paso 1. En Excel, en la parte superior en la pestaña de **Power Pivot**, seleccione **Medidas** y **Nueva medida**
+
+    ![img](./images/imgT6P1.png) 
+
+- Paso 2.Seleccione en:
+
+    > Nombre de la tabla: **Sales** <br> 
+    > Nombre de la medida: **Promedio Precio**<br> 
+    > DAX:  = AVERAGE(Sales[Unit Price]).
+    > Categoría: **Moneda**
+
+    ![img](./images/imgT6P2.png) 
+
+- Paso 4. Realice el mismo proceso para las siguientes medidas:
+
+    > - Precio Medio =MEDIAN(Sales[Unit Price]) <br>
+    > - Precio mínimo =MIN(Sales[Unit Price]) <br>
+    > - Precio máximo =MAX(Sales[Unit Price])<br>
+    > - Órdenes = DISTINCTCOUNT(Sales[SalesOrderNumber])<br>
+    > - Líneas de pedido =COUNTROWS(Sales) <br>
+    > - Doble de Ordenes = 2 * CALCULATE( DISTINCTCOUNT(Sales[SalesOrderNumber]); SAMEPERIODLASTYEAR(Calendario[Date]))
+
+    ![img](./images/imgT6P4.png) 
+
+   
+- Paso 5. agregue cada medida a la tabla dinamica.
+
+    ![img](./images/imgT6P5.png) 
+
+### Tarea 7. Crear KPI
+
+- Paso 1. En Excel, en la parte superior en la pestaña de **Power Pivot**, seleccione **KPI** y **Nuevo KPI**
+
+- Paso 2. Utilizaremos la medida que configuramos en el paso anterior **Doble de Ordenes** para generar un KPI que me permita como objetivo o destino considerar el doble de ordenes frente al año anterior
+
+- Paso 3. En el KPI seleccione en los campos:
+
+    >- Campo base de KPI: **Órdenes**
+    >- Medida: Doble de Ordenes
+
+    Las demas configuraciones puede dejarlas por default y seleccione **Aceptar**.
+
+- Paso 4. Agregue el KPI al inicio en la tabla dinamica y podra ver los iconos correspondientes
+
+    ![img](./images/imgT7P4.png) 
+
+### Tarea 8. Crear Gráficos dinámicos
+
+- Paso 1. En Excel, en la pestaña de **Insertar** en la sección de **Gráficos**  seleccione **Gráfico dinámico**. 
+
+    ![img](./images/imgT8P1.png) 
+
+- Paso 2. En el elemento agregado, seleccione los campos para exponer la información. En ejes seleccione el **Category**  y en Valores agregue a **Sales**
+
+    ![img](./images/imgT8P2.png) 
+
+- Paso 3. Agregue una segmentación por Años y editela para que pueda filtrar ambos objetos visuales.
+
+
 
 ### Resultado esperado
-En esta sección se debe mostrar el resultado esperado de nuestro laboratorio
-![imagen resultado](../images/img3.png)
+Con lo realizado, tendremos un modelo relacional que nos permite crear diferentes objetos visuales para analizar la información de manera más detallada y eficiente.
+
+![img](./images/imgT8P3.png) 
