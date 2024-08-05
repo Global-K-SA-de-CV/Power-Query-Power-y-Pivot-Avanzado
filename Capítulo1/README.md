@@ -140,7 +140,7 @@ Esta tarea le permite revisar y generar perfiles de los datos. Esto le ayuda a d
 
     ![img](./images/imgT3P7.png) 
 
-### Tarea 4. Configurar la consulta del Employee
+### Tarea 4. Configurar la consulta del Salesperson
 
 - Paso 1. En el panel Consultas, seleccione la consulta **DimEmployee**
 
@@ -151,6 +151,7 @@ Esta tarea le permite revisar y generar perfiles de los datos. Esto le ayuda a d
     ![img](./images/imgT4P3.png) 
 
 - Paso 4. Busque la columna **SalesPersonFlag** y, a continuación, filtre la columna para seleccionar solo **Salespeople** (es decir, **TRUE**) y haga clic en **Aceptar**.
+
     ![img](./images/imgT4P4.png) 
 
 - Paso 5. En el panel derecho de la **Configuración de consulta**, en la lista **Pasos aplicados**, observe que se agrego el paso **Filas filtradas**.
@@ -197,9 +198,9 @@ Esta tarea le permite revisar y generar perfiles de los datos. Esto le ayuda a d
 
     >*UPN es un acrónimo de nombre principal de usuario.*
 
-**En la parte inferior izquierda, en la barra de estado, compruebe que la consulta tiene 5 columnas y 18 filas.**
+- Paso 16. En la parte inferior izquierda, en la barra de estado, compruebe que la consulta tiene 5 columnas y 18 filas.
 
-![img](./images/imgT4P16.png) 
+    ![img](./images/imgT4P16.png) 
 
 ### Tarea 5. Configuración de la consulta SalespersonRegion
 
@@ -212,13 +213,14 @@ Esta tarea le permite revisar y generar perfiles de los datos. Esto le ayuda a d
     ![img](./images/imgT5P4.png)  
 
 - Paso 5. En la barra de estado, compruebe que la consulta tiene 2 columnas y 39 filas.
-    ![img](./images/imgT5P4.png)  
+    ![img](./images/imgT5P5.png)  
 
 ### Tarea 6. Configurar la consulta del Product
 
 - Paso 1. Seleccione la consulta **DimProduct** y cambie el nombre de la consulta a **Product**.
 
 - Paso 2. Busque la columna **FinishedGoodsFlag** y, a continuación, filtre la columna para recuperar los productos que son productos terminados (es decir, **TRUE**).
+
     ![img](./images/imgT6P2.png)  
 
 - Paso 3. Elimine todas las columnas, excepto las siguientes:
@@ -249,10 +251,10 @@ Esta tarea le permite revisar y generar perfiles de los datos. Esto le ayuda a d
 
 - Paso 10. Cambie el nombre de las siguientes cuatro columnas siguientes:
 
-        • EnglishProductName al Product
+        • EnglishProductName a Product
         • StandardCost a Standard Cost (incluir un espacio)
-        • EnglishProductSubcategoryNombre a la Subcategory
-        • EnglishProductCategoryName a la Category 
+        • EnglishProductSubcategoryNombre a Subcategory
+        • EnglishProductCategoryName a Category 
 
 - Paso 11. En la barra de estado, compruebe que la consulta tiene 6 columnas y 397 filas.
 
@@ -507,12 +509,12 @@ Esta tarea le permite revisar y generar perfiles de los datos. Esto le ayuda a d
 
 
 ### Resultado esperado
-En el Editor de Power Query, compruebe que tiene **8 consultas**, con el nombre correcto de la siguiente manera:
+   
 
 ![img](./images/imgR1.png)
 
 
-- Paso 1. Seleccione **Cerrar y cargar en** para cargar los datos en Excel y cierre la ventana Editor de Power Query.
+- Paso 1. Seleccione **Cerrar y cargar en** para cargar los datos en Excel 
 
 - Paso 2. En la ventana de **Importar datos**, seleccione solo **Crear unicamente la conexión** 
 
