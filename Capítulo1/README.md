@@ -46,7 +46,6 @@ Al finalizar la práctica, serás capaz de:
 - Paso 10. Para importar los datos de la tabla, seleccione la casilla de verificación situada junto a las siguientes tablas y luego seleccione **Aceptar**:
 
         • DimEmployee
-        • DimEmployeeSalesTerritory
         • DimProduct
         • DimReseller
         • DimSalesTerritory
@@ -60,7 +59,7 @@ Ahora se ha conectado a seis tablas de una base de datos de SQL Server.
 
 Esta tarea le permite revisar y generar perfiles de los datos. Esto le ayuda a determinar cómo limpiar y transformar los datos más adelante. También revisará las tablas de dimensiones con el prefijo "Dim" y las tablas de hechos con el prefijo "Fact".
 
-- Paso 1.En la ventana Editor de Power Query, a la izquierda, observe el panel Consultas. El panel Consultas contiene una consulta para cada tabla que ha seleccionado:
+- Paso 1. En la ventana Editor de Power Query, a la izquierda, observe el panel Consultas. El panel Consultas contiene una consulta para cada tabla que ha seleccionado:
 
     ![img](./images/imgT2P1.png) 
 
@@ -106,13 +105,10 @@ Esta tarea le permite revisar y generar perfiles de los datos. Esto le ayuda a d
 
 - Paso 14. Coloque el cursor sobre la barra de **Ware House** y observe que hay cinco filas con este valor.
 
-- Paso 15. En el panel **Consultas**, seleccione la consulta **DimSalesTerritory**.
-    >*La tabla contiene una fila por región de ventas, incluida la sede central corporativa. Las regiones se asignan a un país y los países se asignan a grupos.*
-
-- Paso 16. En el panel Consultas, seleccione la consulta **FactResellerSales**.
+- Paso 15. En el panel Consultas, seleccione la consulta **FactResellerSales**.
     >*La tabla contiene una fila por línea de pedido de ventas: un pedido de ventas contiene uno o varios elementos de línea*.
 
-- Paso 17. Revise la calidad de la columna **TotalProductCost** y observe que el 8 % de las filas están vacías.
+- Paso 16. Revise la calidad de la columna **TotalProductCost** y observe que el 8% de las filas están vacías.
     >*La falta de valores de columna es un problema de calidad de los datos.*
 
     ![img](./images/imgT2P17.png) 
@@ -202,7 +198,7 @@ Esta tarea le permite revisar y generar perfiles de los datos. Esto le ayuda a d
 
     ![img](./images/imgT4P16.png) 
 
-### Tarea 5. Configuración de la consulta SalespersonRegion
+
 
 - Paso 1. En el panel Consultas, seleccione la consulta **DimEmployeeSalesTerritory**.
 
@@ -215,7 +211,7 @@ Esta tarea le permite revisar y generar perfiles de los datos. Esto le ayuda a d
 - Paso 5. En la barra de estado, compruebe que la consulta tiene 2 columnas y 39 filas.
     ![img](./images/imgT5P5.png)  
 
-### Tarea 6. Configurar la consulta del Product
+### Tarea 5. Configurar la consulta del Product
 
 - Paso 1. Seleccione la consulta **DimProduct** y cambie el nombre de la consulta a **Product**.
 
@@ -260,7 +256,7 @@ Esta tarea le permite revisar y generar perfiles de los datos. Esto le ayuda a d
 
     ![img](./images/imgT6P11.png) 
 
-### Tarea 7. Configurar la consulta de Reseller
+### Tarea 6. Configurar la consulta de Reseller
 
 - Paso 1. Seleccione la consulta **DimReseller** y cambie el nombre a **Reseller**.
 - Paso 2. Elimine todas las columnas, excepto las siguientes:
@@ -301,7 +297,7 @@ Esta tarea le permite revisar y generar perfiles de los datos. Esto le ayuda a d
 
     ![img](./images/imgT7P9.png)  
 
-### Tarea 8. Configurar la consulta de Region
+### Tarea 7. Configurar la consulta de Region
 
 - Paso 1. Seleccione la consulta **DimSalesTerritory** y cambie el nombre de la consulta a **Region**.
 
@@ -327,7 +323,7 @@ Esta tarea le permite revisar y generar perfiles de los datos. Esto le ayuda a d
 
     ![img](./images/imgT8P6.png)  
 
-### Tarea 9. Configurar la consulta de Sales
+### Tarea 8. Configurar la consulta de Sales
 
 - Paso 1. Seleccione la consulta **FactResellerSales** y cámbiele el nombre a **Sales**.
 
@@ -393,7 +389,7 @@ Esta tarea le permite revisar y generar perfiles de los datos. Esto le ayuda a d
 
     ![img](./images/imgT9P11.png) 
 
-### Tarea 10. Configurar la consulta de Targets
+### Tarea 9. Configurar la consulta de Targets
 
 - Paso 1. Seleccione la consulta **ResellerSalesTargets** y cambie el nombre a **Targets**.
 
@@ -459,7 +455,7 @@ Esta tarea le permite revisar y generar perfiles de los datos. Esto le ayuda a d
 
     ![img](./images/imgT10P18.png) 
 
-### Tarea 11. Configuración de la consulta ColorFormats 
+### Tarea 10. Configuración de la consulta ColorFormats 
 
  - Paso 1. Seleccione la consulta **ColorFormats** y observe que la primera fila contiene los nombres de columna.
 
@@ -471,7 +467,7 @@ Esta tarea le permite revisar y generar perfiles de los datos. Esto le ayuda a d
 
      ![img](./images/imgT11P3.png) 
 
-### Tarea 12. Actualizar la consulta del Product 
+### Tarea 11. Actualizar la consulta del Product 
 
 - Paso 1. Seleccione la consulta **Product**.
 
@@ -522,7 +518,7 @@ Esta tarea le permite revisar y generar perfiles de los datos. Esto le ayuda a d
 
     ![img](./images/imgR3.png)
 
-Ahora puede ver la vista de **Excel**, con el panel de **Consultas y conexiones** a la derecha, observe las 8 tablas cargadas en el modelo de datos.
+Ahora puede ver la vista de **Excel**, con el panel de **Consultas y conexiones** a la derecha, observe las 7 tablas cargadas en el modelo de datos.
 
 ![img](./images/imgR4.png)
 
